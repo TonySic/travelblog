@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+/* --- GENERAL ------------------------------------------------------------------ */
+body, html {
+    width: 100vw;
+}
+
+* {
+    font-family: "rocknroll one", arial, "sans-serif";
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+h1 {
+    font-size: 1.7em;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- AVATAR -------- */
+img.avatar {
+    width: 50px;
+}
+
+.avatar {
+    border-radius: 100%;
+}
+
+/* --- BOUTON LIRE -------- */
+.bouton-lire {
+    color: #2b80b9;
+    background-color: #f2f7ba;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+.bouton-lire:hover {
+    background-color: #2b80b9;
+    color: #f2f7ba;
+    transition: 0.5s;
+
+}
+
+/* --- SECTION TOP ------------------------------------------------------------------ */
+/* --- structure header -------- */
+
+#section-top {
+    width: 100vw;
+    display: grid;
+    grid-template:
+        [row1-start]"bandeau"   500px [row1-end]
+        [row2-start]"nav"       80px [row2-end]
+        [row3-start]"div-bali"  800px [row3-end]
+        / 100vw;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- bandeau -------- */
+#bandeau {
+    width: 100vw;
+    height: 500px;
+    grid-area: bandeau;
+    background: linear-gradient(to bottom, rgba(43,128,185,0.3), rgba(242,247,186,0.5)),
+    url("./images/beach.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#logo {
+    font-size: 100px;
+    margin: 20px;
+}
+
+#bandeau h2 {
+    font-size: 1.2em;
+}
+
+/* --- nav -------------- */
+
+#nav-desktop {
+    width: 100vw;
+    height: 80px;
+    grid-area: nav;
+    background-color: #f2f7ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-responsive {
+    display: none;
+}
+
+#list-nav-desktop {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: #2b80b9;
+}
+
+/* --- bali ------------- */
+#div-bali {
+    width: 100%;
+    height: 100%;
+    grid-area: div-bali;
+    background: linear-gradient(to bottom, rgba(43,128,185,0.3), rgba(242,247,186,0.3)),
+    url(./images/bali.jpg) fixed no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#art-bali {
+    position: relative;
+    left: 50px;
+    bottom: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #2b80b9 !important;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+#auteur-bali {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* --- CONTENU ------------------------------------------------------------------ */
+/* --- Séparation 2 colonnes -------- */
+#contenu {
+    display: grid;
+    grid-template:
+        [row1-start]"top5 feed" auto [row1-end]
+        / 35vw 65vw;
+    align-content: start;
+    justify-items: space-between;
+    align-items: stretch;
+}
+
+/* --- Colonne TOP5 ---------------------------------------------------- */
+#conteneur-top5 {
+    grid-area: top5;
+    display: grid;
+    grid-template:
+        [row1-start]"intro-top5" auto [row1-end]
+        [row2-start]"num1" auto [row2-end]
+        [row3-start]"num2" auto [row3-end]
+        [row4-start]"num3" auto [row4-end]
+        [row5-start]"num4" auto [row5-end]
+        [row6-start]"num5" auto [row6-end]
+        [row7-start]"classement" auto [row7-end]
+        / auto;
+    background-color: #2b80b9;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+}
+
+#intro-top5 {
+    grid-area: intro-top5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-top5 i {
+    font-size: 3em;
+    margin: 10px;
+}
+
+#intro-top5 h1 {
+    font-size: 1.5em;
+    margin: 20px;
+    padding: 20px;
+    width: fit-content;
+    border-bottom: #f2f7ba 2px solid;
+}
+
+.article-top5 {
+    width: 30vw;
+    border: 1px solid #f2f7ba;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px  #f2f7ba;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#article-top5 h2 {
+    font-size: 1.2em;
+    width: 20vw;
+}
+
+#article-top5 p {
+    font-size: 1em;
+}
+
+#num1 {
+    grid-area: num1;
+}
+
+#num2 {
+    grid-area: num2;
+}
+
+#num3 {
+    grid-area: num3;
+}
+
+#num4 {
+    grid-area: num4;
+}
+
+#num5 {
+    grid-area: num5;
+}
+
+.numnote {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#classement {
+    grid-area: classement;
+}
+
+.top5-container-image {
+    height: 13vw;
+    width: 20vw;
+    border: 5px solid white;
+    align-self: center;
+}
+
+.photo-top5 {
+    grid-area: photo;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.publitop5 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 20vw;
+    align-items: center;
+}
+
+
+/* --- Colonne FEED --------------------------------------------- */
+#conteneur-feed {
+    grid-area: feed;
+    display: grid;
+    grid-template:
+        [row1-start]"intro-feed" auto [row1-end]
+        [row2-start]"montreal" auto [row2-end]
+        [row3-start]"sydney" auto [row3-end]
+        [row4-start]"rio" auto [row4-end]
+        / auto;
+    justify-content: center;
+    align-content: stretch;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#conteneur-feed h2 {
+    color: #2b80b9;
+}
+
+#conteneur-feed i {
+    color: #2b80b9;
+    font-size: 1.5em;
+}
+
+#intro-feed {
+    grid-area: intro-feed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2b80b9;
+    border-bottom: #2b80b9 3px solid;
+}
+
+#intro-feed h1 {
+    padding: 20px;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+#intro-photos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#intro-photos img {
+    width: 200px;
+    height: auto;
+}
+
+#montreal {
+    grid-area: montreal;
+}
+
+#sydney {
+    grid-area: sydney;
+}
+
+#rio {
+    grid-area: rio;
+}
+
+/* --- Structure articles FEED ---------- */
+.feed {
+    width: 55vw;
+    grid-area: feed;
+    display: grid;
+    grid-template:
+        [row1-start]"titre  " auto [row1-end]
+        [row2-start]"auteur " auto [row2-end]
+        [row3-start]"photo "  auto [row3-end]
+        [row4-start]"legende " 200px [row4-end]
+        [row5-start]"bouton " auto [row5-end]
+    / auto;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-bottom: #2b80b9 2px solid;
+}
+
+.feed h2 {
+    grid-area: titre;
+    padding-top: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.auteur {
+    grid-area: auteur;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 5px 0;
+}
+
+.feed-container-image {
+    height: 281.25px;
+    width: 450px;
+    margin: 5px 0 5px 0;
+}
+
+.photo-feed {
+    grid-area: photo;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.legende {
+    grid-area: legende;
+    text-align: center;
+    width: 80%;
+}
+
+.bouton-lire {
+    grid-area: bouton;
+}
+
+/* --- SECTION BOTTOM ------------------------------------------------------------------ */
+#section-bottom {
+    margin: auto;
+    display: grid;
+    grid-template:
+        [row1-start]"promo"   500px [row1-end]
+        [row2-start]"partenaires" auto [row2-end]
+        [row3-start]"footer"  auto [row3-end]
+        / auto;
+    align-content: space-between;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#promo {
+    width: 100%;
+    height: 100%;
+    grid-area: promo;
+    background : linear-gradient(to bottom, rgba(43,128,185,0.3), rgba(242,247,186,0.6)),
+    url(./images/plane.jpg) 100% no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #2b80b9;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+#promo i {
+    font-size: 3em;
+    margin: 10px;
+}
+
+#promo p {
+    color: white;
+}
+
+#promo h2 {
+    width: fit-content;
+    padding-bottom: 10px;
+    border-bottom: #f2f7ba 2px solid;
+}
+
+#partenaires {
+    width: 100%;
+    grid-area: partenaires;
+    background-color: #2b80b9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+
+.logo-part {
+    width: 200px;
+    transition: 0.5s;
+}
+
+.logo-part:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+footer {
+    width: 100%;
+    grid-area: footer;
+    background-color: #f2f7ba;
+    color: #2b80b9;
+    text-align: center;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#copyright i {
+    margin-right: 10px;
+}
+
+#logos-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#logos-footer i {
+    font-size: 2em;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+#logos-footer i:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* --- MEDIA QUERIES ----------------------------------------------------------------------- MEDIA QUERIES --- */
+
+@media screen and (max-width: 1024px) {
+
+    #section-top {
+        grid-template:
+            [row1-start]"nav"       100px [row1-end]
+            [row2-start]"bandeau"   500px [row2-end]
+            [row3-start]"div-bali"  700px [row3-end]
+            / 100vw;
+            align-items: flex-start;
+    }
+
+    #nav-responsive {
+        grid-area: nav;
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        color: #2b80b9;
+        background-color: #f2f7ba ;
+    }
+
+    
+    #hamburger {
+        font-size: 200%;
+        color: #2b80b9;
+        padding: 20px;
+    }
+
+    #nav-desktop {
+        display: none;
+    }
+
+    #list-nav-responsive {
+        display: none;
+        display: flex;
+        width: 100vw;
+        list-style: none;
+        justify-content: space-around;
+    }
+
+    #nav-resp-row1 {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #art-bali {
+        top: 15%;
+        left: 25%;
+        width: 200px;
+    }
+
+    .publitop5 {
+        width: 30vw;
+    }
+
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    #contenu, #conteneur-top5, #conteneur-feed{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .article-top5 {
+        width: 90vw;
+    }
+
+    .publitop5, .numnote, .top5-container-image {
+        width: 85vw;
+        height: auto;
+    }
+
+    .feed {
+        width: 100vw;
+    }
+}
